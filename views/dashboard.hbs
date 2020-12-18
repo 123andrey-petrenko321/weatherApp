@@ -1,0 +1,52 @@
+{{>nav}}
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <form action="/users/dashboard" method="POST">
+                    <input id="city" name="city" type="text" class="validate">
+                    <button type="submit" class="btn right">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    {{#if error}}
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <h3 class="red-text text-darken-4 center-align">{{error}}</h3>
+        </div>
+    </div>       
+    {{/if}}
+    {{#if message}}
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <h3 class="green-text text-darken-4 center-align">{{message}}</h3>
+        </div>
+    </div>       
+    {{/if}}
+
+{{#if city}}
+<ul>
+ {{>cityCard}}
+</ul>
+   <div class="row button">
+    <div class="col s4 offset-s4">
+        <form action="/users/cityCard" method="POST">
+            <div class="row favorits">
+                <div class="col s9">
+                    <input name="city" id="city" value={{city}}>
+                </div>
+                <div class="col s3">
+                    <button type="submit" class="btn right">Add</button>
+                </div>
+            </div>
+        </form>
+        {{#if msg}}
+        <div class="row">
+            <span class="green-text text-darken-1 center-align">{{msg}}</span>
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/if}}

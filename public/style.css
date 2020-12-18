@@ -1,0 +1,38 @@
+.clouds{
+    margin-bottom: 0;
+}
+.feels_like{
+    margin-bottom: 0;
+}
+.button{
+    margin-bottom: 0;
+}
+.btn{
+    height: 35px;
+}
+.favorits{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+.link-city{
+    font-size: 24px;
+}
+.forecast-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr 1fr;
+}
+.card-panel{
+    padding: 40px 40px 30px 40px;
+}
+.btn-remove{
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: transparent;
+}
+

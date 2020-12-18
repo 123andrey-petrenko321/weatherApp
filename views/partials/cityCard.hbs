@@ -1,0 +1,56 @@
+<li class="row">
+    <div class="col s4 offset-s4">
+        <div class="card-panel teal center-align">
+            {{#if city}}
+            <a href="/users/city/{{city}}?" class="white-text center-align link-city">
+                {{city}}
+            </a>
+            {{/if}}
+            <div class="row">
+                {{#if temp}}
+                <span class="white-text center-align">
+                    temp: {{temp}} &#8451
+                </span>
+                {{else}}
+                <span class="white-text center-align">
+                    temp: {{feels_like}} &#8451
+                </span>
+                {{/if}}
+                {{#if feels_like}}
+                <div class="row  feels_like">
+                    <span class="white-text center-align">
+                        feels_like: {{feels_like}} &#8451
+                    </span>
+                </div>
+                {{/if}}
+            </div>
+            <div class="row">
+                {{#if descr}}
+                <div class="row clouds">
+                    <span class="white-text center-align">
+                        {{descr}}
+                    </span>
+                </div>
+                {{/if}}
+                {{#if icon}}
+                <img class="responsive-img" src="http://openweathermap.org/img/w/{{icon}}.png" alt="">
+                {{/if}}
+                {{#if wind}}
+                <div class="row wind">
+                    <span class="white-text center-align wind-text">
+                        wind speed: {{wind}} m/s
+                    </span>
+                </div>
+                {{/if}}
+                {{#if date}}
+                <div class="row wind">
+                    <span class="white-text center-align">
+                        {{date}}
+                    </span>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+</li>

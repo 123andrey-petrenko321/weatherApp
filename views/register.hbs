@@ -1,0 +1,35 @@
+<h1>Registration</h1>
+<div class="row">
+    <form class="col s12" action="/users/register" method="POST">
+        <div class="row">
+            <input class="input-field col s3" type="text" id="name" name="name" minlength="2" maxlength="32" placeholder="Name" required />
+        </div>
+        <div class="row">
+            <input type="email" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="input-field col s3" required />
+        </div>
+        <div class="row">
+            <input type="password" id="password" name="password" minlength="2" maxlength="16" placeholder="Password" class="input-field col s3"
+                required />
+        </div>
+        <div class="row">
+            <input type="password" id="password2" name="password2" placeholder="Confirm password"
+                class="input-field col s3" required />
+        </div>
+        <div class="row">
+            <input type="submit" value="Register" class="btn" />
+        </div>
+        <div class="row">
+            <a href="/users/login">Alredy registered ? Click here!</a>
+        </div>
+
+
+        {{#if errors.length}}
+            <ul class="row"></ul>
+                {{#each errors }}
+                    <li >{{message}}</li>
+                {{/each}}
+            </ul>
+        {{/if}}
+
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<h1>Hello {{name}}</h1>
+<div class="row">
+
+
+    {{#if messages.success_msg}}
+    <div class="row">
+        <span class="green-text text-darken-1">{{messages.success_msg}}</span>
+    </div>
+    {{/if}}
+
+    {{#if messages.error}}
+    <div class="row">
+        <span class="red-text text-darken-4">{{messages.error}}</span>
+    </div>
+    {{/if}}
+
+
+    <form class="col s12" action="/users/login" method="POST">
+
+        <div class="row">
+            <input type="email" id="email" name="email" placeholder="Email" class="input-field col s3 " required />
+        </div>
+        <div class="row">
+            <input type="password" id="password" name="password" placeholder="Password" class="input-field col s3"
+                required />
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Login" class="btn" />
+        </div>
+        <div class="row">
+            <a href="/users/register">Registration</a>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,19 @@
+{{>nav}}
+<h1 class="center-align">favorites</h1>
+
+{{#if error}}
+<div class="row">
+    <div class="col s6 offset-s3">
+        <h3 class="red-text text-darken-4 center-align">{{error}}</h3>
+    </div>
+</div>
+{{/if}}
+{{#if weather}}
+<ul>
+    {{#each weather}}
+    {{>cityCard}}
+    {{/each}}
+</ul>
+{{else}}
+<h4 class="red-text text-darken-4 center-align">No added cities</h4>
+{{/if}}
